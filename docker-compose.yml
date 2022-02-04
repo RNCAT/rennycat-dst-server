@@ -15,21 +15,6 @@ services:
       - type: volume
         source: data
         target: /data
-  cave:
-    image: yeetzone/dontstarvetogether
-    container_name: cave
-    hostname: cave
-    depends_on:
-      - data
-    env_file:
-      - cave.env
-      - local.env
-    ports:
-      - "11000:11000/udp"
-    volumes:
-      - type: volume
-        source: data
-        target: /data
   data:
     image: yeetzone/dontstarvetogether-data
     volumes:
